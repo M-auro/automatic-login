@@ -4,6 +4,18 @@ import os
 import requests
 
 def login_to_website(login_url, username, password):
+    """
+    Logs into a website using the provided credentials.
+
+    Args:
+        login_url (str): The URL of the login page.
+        username (str): The username for login.
+        password (str): The password for login.
+
+    Returns:
+        requests.Session: A session object if login is successful.
+        None: If login fails.
+    """
     # Create a session
     session = requests.Session()
 
