@@ -1,5 +1,6 @@
 ## Python code for automatic login to a website using requests library
 
+import os
 import requests
 
 def login_to_website(login_url, username, password):
@@ -23,8 +24,8 @@ def login_to_website(login_url, username, password):
 
 if __name__ == "__main__":
     login_url = 'https://example.com/login'
-    username = 'your_username'
-    password = 'your_password'
+    username = os.getenv('LOGIN_USERNAME')
+    password = os.getenv('LOGIN_PASSWORD')
 
     session = login_to_website(login_url, username, password)
     if session:
